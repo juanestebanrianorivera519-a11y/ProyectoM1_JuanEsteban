@@ -17,8 +17,7 @@ Aplicación web estática e interactiva para generar paletas de colores aleatori
 
 ## Demo
 
-> Si ya desplegaste la app, reemplazá esta línea con la URL pública.  
-> Ejemplo: `https://tu-usuario.github.io/palette-studio`
+🔗 [Ver aplicación en vivo](https://juanestebanrianorivera519-a11y.github.io/ProyectoM1_JuanEsteban)
 
 ---
 
@@ -41,7 +40,7 @@ Aplicación web estática e interactiva para generar paletas de colores aleatori
 ## Estructura del proyecto
 
 ```
-palette-studio/
+ProyectoM1_JuanEsteban/
 ├── index.html     # Estructura semántica de la app
 ├── styles.css     # Estilos y diseño visual
 ├── app.js         # Lógica de generación y comportamiento
@@ -111,14 +110,11 @@ La app es un sitio estático puro — no requiere Node.js, ni instalar dependenc
 ### Opción A — Abrir directamente en el navegador
 
 ```bash
-# Simplemente abrí el archivo en tu navegador
+# En Windows: doble clic sobre index.html
 # En macOS:
 open index.html
-
 # En Linux:
 xdg-open index.html
-
-# En Windows: doble clic sobre index.html
 ```
 
 > **Limitación:** La API `navigator.clipboard` requiere un contexto seguro (`https://` o `localhost`). Si la copiada falla al abrir con `file://`, usá la Opción B.
@@ -137,7 +133,6 @@ Si tenés [Visual Studio Code](https://code.visualstudio.com/):
 ```bash
 # Python 3
 python -m http.server 8080
-
 # Luego abrí http://localhost:8080 en el navegador
 ```
 
@@ -145,55 +140,28 @@ python -m http.server 8080
 
 ## Desplegar la aplicación
 
-Al ser un sitio estático (solo HTML, CSS y JS), puede alojarse gratis en varias plataformas sin configuración de servidor.
+### GitHub Pages
 
-### GitHub Pages (recomendado)
+El proyecto está desplegado en GitHub Pages. Para replicar el despliegue:
 
-1. Creá un repositorio en [github.com](https://github.com) y subí los archivos:
+1. Subí los archivos al repositorio:
 
 ```bash
 git init
 git add .
 git commit -m "feat: initial commit"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+git remote add origin https://github.com/juanestebanrianorivera519-a11y/ProyectoM1_JuanEsteban.git
 git push -u origin main
 ```
 
 2. En GitHub, andá a **Settings → Pages**.
-3. En *Source*, elegí **Deploy from a branch** → `main` → `/ (root)`.
+3. En *Fuente*, elegí **Implementar desde una rama** → `principal` → `/ (raíz)`.
 4. Guardá. En unos minutos la app estará disponible en:
 
 ```
-https://TU_USUARIO.github.io/TU_REPO
+https://juanestebanrianorivera519-a11y.github.io/ProyectoM1_JuanEsteban
 ```
-
----
-
-### Netlify (drag & drop, sin cuenta de GitHub requerida)
-
-1. Andá a [netlify.com](https://netlify.com) e iniciá sesión.
-2. En el dashboard, arrastrá la carpeta del proyecto al área de **"drag and drop your site folder here"**.
-3. Netlify genera automáticamente una URL pública tipo `https://nombre-aleatorio.netlify.app`.
-4. Opcional: en *Site settings → Domain management* podés configurar un dominio propio.
-
----
-
-### Vercel
-
-1. Instalá la CLI de Vercel:
-
-```bash
-npm install -g vercel
-```
-
-2. Desde la carpeta del proyecto:
-
-```bash
-vercel
-```
-
-3. Seguí las instrucciones del asistente interactivo. La app queda desplegada en `https://TU_PROYECTO.vercel.app`.
 
 ---
 
@@ -205,7 +173,14 @@ vercel
 | Firefox | 85+ |
 | Safari | 13.1+ |
 
-> La API `navigator.clipboard` requiere HTTPS en producción. Todas las plataformas de despliegue listadas la proveen por defecto.
+> La API `navigator.clipboard` requiere HTTPS en producción. GitHub Pages lo provee por defecto.
+
+---
+
+## Autor
+
+**Juan Esteban Riaño Rivera**  
+[github.com/juanestebanrianorivera519-a11y](https://github.com/juanestebanrianorivera519-a11y)
 
 ---
 
