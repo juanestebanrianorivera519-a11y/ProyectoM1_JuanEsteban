@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genera paletas de colores aleatorias al instante.">
+    <title>Generador de Paletas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de Paletas</h1>
+        <p>Genera combinaciones unicas con un clic</p>
+    </header>
+
+    <main>
+        <!-------CONTROLES------->
+        <section class="controles" aria-label="Opciones de paleta">
+            <label for="select-cantidad">Cantidad de colores</label>
+            <select id="select-cantidad">
+                <option value="6">6 colores</option>
+                <option value="8">8 colores</option>
+                <option value="9">9 colores</option>
+            </select>
+            <button id="btn-generar">Generar Paleta</button>
+        </section>
+
+        <!--------SELECTOR DE FORMATO------>
+        <label for="select-formato">Formato de color
+            <select id="select-formato">
+                <option value="hex">HEX</option>
+                <option value="hsl">HSL</option>
+            </select>
+        </label>
+
+        <div id="paleta" role="list"></div>
+        <div id="toast" role="status" aria-live="polite"></div>
+    </main>
+    
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

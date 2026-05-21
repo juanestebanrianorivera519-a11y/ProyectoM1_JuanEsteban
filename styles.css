@@ -1,0 +1,338 @@
+/* ─────────────────────────────
+    GOOGLE FONT
+───────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/* ─────────────────────────────
+    RESET
+───────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ─────────────────────────────
+    BODY
+───────────────────────────── */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+    min-height: 100vh;
+}
+
+/* ─────────────────────────────
+    HEADER
+───────────────────────────── */
+header {
+    padding: 40px 20px;
+    border-bottom: 1px solid #1f1f1f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* TÍTULO */
+header h1 {
+    font-size: 52px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, #ffffff, #d4a96a);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+/* SUBTÍTULO */
+header p {
+    font-size: 17px;
+
+    color: #9a9a9a;
+
+    font-weight: 400;
+
+    max-width: 600px;
+
+    line-height: 1.5;
+}
+
+/* ─────────────────────────────
+    MAIN
+───────────────────────────── */
+main {
+    padding: 40px 24px;
+}
+
+/* ─────────────────────────────
+    CONTROLES
+───────────────────────────── */
+.controles {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+/* LABEL */
+.controles label {
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+/* ─────────────────────────────
+    SELECTS
+───────────────────────────── */
+#select-formato,
+#select-cantidad {
+    appearance: none;
+
+    background-color: #181818;
+
+    color: white;
+
+    border: 1px solid #2e2e2e;
+
+    padding: 12px 42px 12px 16px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 500;
+
+    outline: none;
+
+    transition: 0.25s;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M3 5l5 5 5-5'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+
+    background-position: right 14px center;
+}
+
+/* HOVER */
+#select-formato:hover,
+#select-cantidad:hover {
+    border-color: #666;
+}
+
+/* FOCUS */
+#select-formato:focus,
+#select-cantidad:focus {
+    border-color: #d4a96a;
+
+    box-shadow: 0 0 0 4px rgba(212, 169, 106, 0.15);
+}
+
+/* ─────────────────────────────
+    BOTÓN GENERAR
+───────────────────────────── */
+#btn-generar {
+    background: linear-gradient(135deg, #d4a96a, #f0c98d);
+
+    color: #111;
+
+    border: none;
+
+    padding: 13px 24px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+#btn-generar:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+}
+
+/* ─────────────────────────────
+    GRID DE COLORES
+───────────────────────────── */
+#paleta {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 2px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background-color: #1b1b1b;
+}
+
+/* ─────────────────────────────
+    TARJETAS
+───────────────────────────── */
+.tarjeta-color {
+    min-height: 360px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: 0.25s;
+}
+
+.tarjeta-color:hover {
+    transform: scale(1.02);
+
+    filter: brightness(1.05);
+}
+
+/* ─────────────────────────────
+    TEXTO COLOR
+───────────────────────────── */
+.color-hex {
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 1px;
+}
+
+.color-hsl {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    opacity: 0.9;
+
+    margin-bottom: 10px;
+}
+
+/* ─────────────────────────────
+    BOTÓN COPIAR
+───────────────────────────── */
+.btn-copiar {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid currentColor;
+
+    color: inherit;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.btn-copiar:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* ─────────────────────────────
+    TOAST
+───────────────────────────── */
+#toast {
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: white;
+
+    color: black;
+
+    padding: 12px 22px;
+
+    border-radius: 40px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+#toast.visible {
+    opacity: 1;
+}
+
+/* ─────────────────────────────
+    RESPONSIVE
+───────────────────────────── */
+@media (max-width: 768px) {
+    header h1 {
+    font-size: 38px;
+    }
+
+    header p {
+    font-size: 15px;
+    }
+
+    .tarjeta-color {
+    min-height: 260px;
+    }
+
+    #paleta {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .color-hex {
+    font-size: 18px;
+    }
+}
